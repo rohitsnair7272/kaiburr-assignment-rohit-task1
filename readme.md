@@ -2,8 +2,6 @@
 
 **Author:** Rohit S Nair
 
----
-
 ## **Table of Contents**
 
 1. [Project Overview](#project-overview)
@@ -13,7 +11,8 @@
    - [2. Clone the Repository](#2-clone-the-repository)
    - [3. Install Dependencies](#3-install-dependencies)
    - [4. MongoDB Setup using Compass](#4-mongodb-setup-using-compass)
-   - [5. Run the Spring Boot Application](#5-run-the-spring-boot-application)
+   - [5. Install & Setup Postman](#5-install--setup-postman)
+   - [6. Run the Spring Boot Application](#6-run-the-spring-boot-application)
 4. [API Endpoints & Postman Testing](#api-endpoints--postman-testing)
 5. [Screenshots](#screenshots)
 6. [Common Issues & Debugging](#common-issues--debugging)
@@ -76,10 +75,11 @@ Expected Output:
 Apache Maven 3.x.x
 ```
 
-#### **Installing MongoDB Compass**
+#### **Installing MongoDB & MongoDB Compass**
 
 Download and install:
 
+- **MongoDB Community Edition**: [Download](https://www.mongodb.com/try/download/community)
 - **MongoDB Compass**: [Download](https://www.mongodb.com/try/download/compass)
 
 ---
@@ -87,8 +87,8 @@ Download and install:
 ### **2. Clone the Repository**
 
 ```sh
-git clone https://github.com/yourusername/kaiburr-task-manager.git
-cd kaiburr-task-manager
+git clone https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1
+cd kaiburr-assignment-rohit-task1
 ```
 
 📸 **(Screenshot Placeholder: Cloning Repository & Navigating into Project Folder)**
@@ -132,7 +132,27 @@ mvn clean install
 
 ---
 
-### **5. Run the Spring Boot Application**
+### **5. Install & Setup Postman**
+
+#### **Step 1: Download & Install Postman**
+
+- Download Postman: [Postman Official Download](https://www.postman.com/downloads/)
+- Install Postman by following on-screen instructions
+
+📸 **(Screenshot Placeholder: Postman Installed on System)**
+
+#### **Step 2: Launch Postman**
+
+- Open Postman
+- Click on **"Create a new request"**
+- Select **HTTP Method** (GET, POST, PUT, DELETE)
+- Enter the API URL (`http://localhost:8080/tasks`)
+
+📸 **(Screenshot Placeholder: Postman Home Screen with New Request Opened)**
+
+---
+
+### **6. Run the Spring Boot Application**
 
 1. Open a terminal in the project root folder
 2. Run the application using Maven:
@@ -163,18 +183,6 @@ POST /tasks
   "name": "Check Server Health",
   "owner": "Admin",
   "command": "ping -c 4 google.com"
-}
-```
-
-**Expected Response:**
-
-```json
-{
-  "id": "task1",
-  "name": "Check Server Health",
-  "owner": "Admin",
-  "command": "ping -c 4 google.com",
-  "status": "created"
 }
 ```
 
@@ -275,63 +283,3 @@ GET /tasks/history
 📸 **(Screenshot Placeholder: Postman - Fetch Execution History Response)**
 
 ---
-
-## **Screenshots**
-
-### **1. MongoDB Compass**
-
-- Database & Collection Created
-- Tasks Collection View
-
-### **2. Terminal Commands**
-
-- Running `mvn install`
-- Running `mvn spring-boot:run`
-
-### **3. Postman API Testing**
-
-- Create Task
-- Get All Tasks
-- Get Task by ID
-- Update Task
-- Delete Task
-- Search Task
-- Execute Task
-- Fetch Execution History
-
-📸 **(Screenshots to be inserted after each step)**
-
----
-
-## **Common Issues & Debugging**
-
-### **1. MongoDB Connection Failed**
-
-- Ensure MongoDB is running:
-  ```sh
-  mongod
-  ```
-- Check Compass connection
-
-### **2. Spring Boot Port Already in Use**
-
-- Kill the process using the port:
-  ```sh
-  kill -9 $(lsof -t -i:8080)
-  ```
-
-### **3. Compilation Errors**
-
-- Run:
-  ```sh
-  mvn clean install
-  ```
-
----
-
-## **Final Notes**
-
-✅ All steps covered in **extreme detail**  
-✅ Includes **MongoDB Compass setup**  
-✅ **Postman API testing screenshots** placeholders  
-✅ **GitHub repository structure & README.md guidelines followed**
