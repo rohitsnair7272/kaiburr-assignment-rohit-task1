@@ -289,8 +289,11 @@ This submission successfully completes Task 1 of the assignment, implementing a 
 
 Through this implementation, the following functionalities were achieved:
 ✅ Efficiently creating, updating, deleting, and retrieving tasks.
+
 ✅ Implementing dynamic search functionality using query parameters.
+
 ✅ Connecting and interacting with MongoDB using Spring Data.
+
 ✅ Testing REST API endpoints in real-time using Postman.
 
 This concludes Task 1, ensuring a well-structured and fully functional API. 🚀
