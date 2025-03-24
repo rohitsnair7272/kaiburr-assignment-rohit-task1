@@ -91,7 +91,7 @@ git clone https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1
 cd kaiburr-assignment-rohit-task1
 ```
 
-📸 **📌 Screenshot:** ![image alt](kaiburr-rohit\screenshots\PostmanGETID.png)
+📸 **📌 Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/cloneRepo.png?raw=true)
 
 ---
 
