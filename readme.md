@@ -91,7 +91,7 @@ git clone https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1
 cd kaiburr-assignment-rohit-task1
 ```
 
-📸 **📌 Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/cloneRepo.png?raw=true)
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/cloneRepo.png?raw=true)
 
 ---
 
@@ -103,7 +103,7 @@ Navigate to the project directory and install dependencies using Maven:
 mvn clean install
 ```
 
-📸 **(Screenshot Placeholder: Running Maven Install Command)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/mvnInstall.png?raw=true)
 
 ---
 
@@ -121,14 +121,14 @@ mvn clean install
 3. Enter **Collection Name:** `tasks`
 4. Click **"Create Database"**
 
-📸 **(Screenshot Placeholder: Creating Database & Collection in MongoDB Compass)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/MongoCreate.png?raw=true)
 
 #### **Step 3: Verify Database Creation**
 
 1. Click on `task_manager` → `tasks`
 2. The collection should be empty
 
-📸 **(Screenshot Placeholder: Empty Task Collection in MongoDB Compass)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/EmptyDatabase.png?raw=true)
 
 ---
 
@@ -146,7 +146,7 @@ mvn clean install
 - Select **HTTP Method** (GET, POST, PUT, DELETE)
 - Enter the API URL (`http://localhost:8080/tasks`)
 
-📸 **(Screenshot Placeholder: Postman Home Screen with New Request Opened)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanRequest.png?raw=true)
 
 ---
 
@@ -159,7 +159,7 @@ mvn clean install
    ```
 3. The API will start at `http://localhost:8080`
 
-📸 **(Screenshot Placeholder: Running Spring Boot Application in Terminal)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/mvnRUN.png?raw=true)
 
 ---
 
@@ -184,7 +184,9 @@ POST /tasks
 }
 ```
 
-📸 **(Screenshot Placeholder: Postman - Creating a Task)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanPOST.png?raw=true)
+
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanPOST2.png?raw=true)
 
 ---
 
@@ -196,7 +198,7 @@ POST /tasks
 GET /tasks
 ```
 
-📸 **(Screenshot Placeholder: Postman - Get All Tasks Response)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanGET.png?raw=true)
 
 ---
 
@@ -208,7 +210,7 @@ GET /tasks
 GET /tasks/task1
 ```
 
-📸 **(Screenshot Placeholder: Postman - Get Task by ID Response)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanGETID.png?raw=true)
 
 ---
 
@@ -230,7 +232,7 @@ PUT /tasks/task1
 }
 ```
 
-📸 **(Screenshot Placeholder: Postman - Updating a Task)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanPUT.png?raw=true)
 
 ---
 
@@ -242,7 +244,7 @@ PUT /tasks/task1
 DELETE /tasks/task1
 ```
 
-📸 **(Screenshot Placeholder: Postman - Deleting a Task)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanDELETE.png?raw=true)
 
 ---
 
@@ -254,7 +256,7 @@ DELETE /tasks/task1
 GET /tasks/search?name=Server
 ```
 
-📸 **(Screenshot Placeholder: Postman - Searching a Task by Name)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanSearchName.png?raw=true)
 
 ---
 
@@ -266,7 +268,7 @@ GET /tasks/search?name=Server
 PUT /tasks/task2/execute
 ```
 
-📸 **(Screenshot Placeholder: Postman - Executing a Task)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanExecute.png?raw=true)
 
 ---
 
@@ -278,6 +280,6 @@ PUT /tasks/task2/execute
 GET /tasks/history
 ```
 
-📸 **(Screenshot Placeholder: Postman - Fetch Execution History Response)**
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanHistory.png?raw=true)
 
 ---
