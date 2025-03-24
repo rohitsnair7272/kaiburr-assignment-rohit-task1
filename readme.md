@@ -288,6 +288,7 @@ GET /tasks/history
 This submission successfully completes Task 1 of the assignment, implementing a RESTful API for managing tasks using Spring Boot and MongoDB. The development process covered everything from setting up the backend to testing API endpoints using Postman.
 
 Through this implementation, the following functionalities were achieved:
+
 ✅ Efficiently creating, updating, deleting, and retrieving tasks.
 
 ✅ Implementing dynamic search functionality using query parameters.
