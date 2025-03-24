@@ -139,8 +139,6 @@ mvn clean install
 - Download Postman: [Postman Official Download](https://www.postman.com/downloads/)
 - Install Postman by following on-screen instructions
 
-📸 **(Screenshot Placeholder: Postman Installed on System)**
-
 #### **Step 2: Launch Postman**
 
 - Open Postman
@@ -228,7 +226,7 @@ PUT /tasks/task1
 {
   "name": "Updated Task Name",
   "owner": "New Owner",
-  "command": "uptime"
+  "command": "echo This is the updated command"
 }
 ```
 
@@ -265,7 +263,7 @@ GET /tasks/search?name=Server
 **Endpoint:**
 
 ```
-PUT /tasks/task1/execute
+PUT /tasks/task2/execute
 ```
 
 📸 **(Screenshot Placeholder: Postman - Executing a Task)**

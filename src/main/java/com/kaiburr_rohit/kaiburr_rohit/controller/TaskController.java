@@ -150,6 +150,23 @@ public class TaskController {
         return output.toString();
     }
     
+    // ✅ Fetch execution history for all tasks
+    @GetMapping("/history")
+    public ResponseEntity<List<TaskExecution>> getTaskHistory() {
+        List<Task> tasks = taskRepository.findAll();
+        List<TaskExecution> history = new ArrayList<>();
+
+        for (Task task : tasks) {
+            if (task.getTaskExecutions() != null) {
+                history.addAll(task.getTaskExecutions());
+            }
+        }
+
+        if (history.isEmpty()) {
+            return ResponseEntity.noContent().build(); // 204 No Content if no history exists
+        }
+        return ResponseEntity.ok(history); // Return list of executed task histories
+    }
 
     // ✅ Function to validate unsafe commands
     private boolean isUnsafeCommand(String command) {
