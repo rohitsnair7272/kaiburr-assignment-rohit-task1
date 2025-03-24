@@ -75,11 +75,10 @@ Expected Output:
 Apache Maven 3.x.x
 ```
 
-#### **Installing MongoDB & MongoDB Compass**
+#### **Installing MongoDB Compass**
 
 Download and install:
 
-- **MongoDB Community Edition**: [Download](https://www.mongodb.com/try/download/community)
 - **MongoDB Compass**: [Download](https://www.mongodb.com/try/download/compass)
 
 ---
