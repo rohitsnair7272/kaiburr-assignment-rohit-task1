@@ -308,6 +308,12 @@ This section demonstrates how the system correctly blocks unsafe commands using 
 
 ---
 
+### **List of Unsafe Commands Blocked:**
+
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/UnsafeCommands.png?raw=true)
+
+---
+
 ### **❌ Example 1: Command Injection Using `&&`**
 
 📌 **Test Input (POST request using Postman):**
@@ -322,14 +328,13 @@ This section demonstrates how the system correctly blocks unsafe commands using 
 
 📌 **Expected Response:**
 
-```json
+```
 {
-  "error": "Command contains unsafe operations and has been blocked."
+  "Task creation failed: Unsafe command detected!"
 }
 ```
 
-📌 **Screenshot:** _(Attach a screenshot of the Postman request and response here)_  
-![Unsafe Command Test 1 - Injection](path/to/screenshot1.png)
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanUnsafe1.png?raw=true)
 
 ---
 
@@ -347,14 +352,13 @@ This section demonstrates how the system correctly blocks unsafe commands using 
 
 📌 **Expected Response:**
 
-```json
+```
 {
-  "error": "Command contains unsafe operations and has been blocked."
+  "Task creation failed: Unsafe command detected!"
 }
 ```
 
-📌 **Screenshot:** _(Attach a screenshot of the Postman request and response here)_  
-![Unsafe Command Test 2 - File Access](path/to/screenshot2.png)
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanUnsafe2.png?raw=true)
 
 ---
 
