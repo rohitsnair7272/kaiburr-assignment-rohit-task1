@@ -185,6 +185,15 @@ POST /tasks
 
 📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanPOST.png?raw=true)
 
+```json
+{
+  "id": "task2",
+  "name": "This_is_Task_2",
+  "owner": "Rohit",
+  "command": "echo This is the Second Task"
+}
+```
+
 📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanPOST2.png?raw=true)
 
 ---
@@ -235,7 +244,29 @@ PUT /tasks/task1
 
 ---
 
-### **5. Delete a Task**
+### **5. Search Task by Name and Id**
+
+**Search Task By Name Endpoint:**
+
+```
+GET /tasks/search?name=Updated Task Name&type=name
+```
+
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanSearchName.png?raw=true)
+
+---
+
+**Search Task By Id Endpoint:**
+
+```
+GET /tasks/search?name=task2&type=id
+```
+
+📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanSearchID.png?raw=true)
+
+---
+
+### **6. Delete a Task**
 
 **Endpoint:**
 
@@ -244,18 +275,6 @@ DELETE /tasks/task1
 ```
 
 📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanDELETE.png?raw=true)
-
----
-
-### **6. Search Task by Name**
-
-**Endpoint:**
-
-```
-GET /tasks/search?name=Server
-```
-
-📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanSearchName.png?raw=true)
 
 ---
 
@@ -280,6 +299,66 @@ GET /tasks/history
 ```
 
 📸 **Screenshot:** ![image alt](https://github.com/rohitsnair7272/kaiburr-assignment-rohit-task1/blob/master/screenshots/PostmanHistory.png?raw=true)
+
+---
+
+### **Testing Unsafe Commands 🚨**
+
+This section demonstrates how the system correctly blocks unsafe commands using the validation function. Below are two test cases where the API rejects potentially harmful commands.
+
+---
+
+### **❌ Example 1: Command Injection Using `&&`**
+
+📌 **Test Input (POST request using Postman):**
+
+```json
+{
+  "id": "unsafe1",
+  "name": "Injection Test",
+  "command": "echo 'Test' && rm -rf /"
+}
+```
+
+📌 **Expected Response:**
+
+```json
+{
+  "error": "Command contains unsafe operations and has been blocked."
+}
+```
+
+📌 **Screenshot:** _(Attach a screenshot of the Postman request and response here)_  
+![Unsafe Command Test 1 - Injection](path/to/screenshot1.png)
+
+---
+
+### **❌ Example 2: Unauthorized File Access**
+
+📌 **Test Input (POST request using Postman):**
+
+```json
+{
+  "id": "unsafe2",
+  "name": "Unauthorized File Access",
+  "command": "chmod 777 /etc/passwd"
+}
+```
+
+📌 **Expected Response:**
+
+```json
+{
+  "error": "Command contains unsafe operations and has been blocked."
+}
+```
+
+📌 **Screenshot:** _(Attach a screenshot of the Postman request and response here)_  
+![Unsafe Command Test 2 - File Access](path/to/screenshot2.png)
+
+---
+
+These tests confirm that the system effectively prevents unsafe command execution, ensuring **security and reliability**. ✅
 
 ---
 

@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TaskRepository extends MongoRepository<Task, String> {
     List<Task> findByNameContaining(String name);
+    List<Task> findByIdContaining(String id);
 }

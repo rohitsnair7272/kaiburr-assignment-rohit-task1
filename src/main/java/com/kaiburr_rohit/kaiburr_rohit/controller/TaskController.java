@@ -75,15 +75,25 @@ public class TaskController {
         }
     }
 
-    // Search tasks by name
-    @GetMapping("/search")
-    public ResponseEntity<List<Task>> searchTasksByName(@RequestParam String name) {
-        List<Task> tasks = taskRepository.findByNameContaining(name);
-        if (tasks.isEmpty()) {
-            return ResponseEntity.notFound().build();
+  // Search tasks by name
+  @GetMapping("/search")
+  public ResponseEntity<List<Task>> searchTasksByName(@RequestParam String type , @RequestParam String name) {
+        if(type.equals("id")){
+            List<Task> tasks = taskRepository.findByIdContaining(name);
+            if (tasks.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(tasks);
+        }else{
+            List<Task> tasks = taskRepository.findByNameContaining(name);
+            if (tasks.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(tasks);
         }
-        return ResponseEntity.ok(tasks);
-    }
+      
+  }
+
 
     // ✅ Execute task command and store execution details
     @PutMapping("/{id}/execute")
@@ -152,21 +162,30 @@ public class TaskController {
     
     // ✅ Fetch execution history for all tasks
     @GetMapping("/history")
-    public ResponseEntity<List<TaskExecution>> getTaskHistory() {
+    public ResponseEntity<List<Map<String, Object>>> getTaskHistory() {
         List<Task> tasks = taskRepository.findAll();
-        List<TaskExecution> history = new ArrayList<>();
+        List<Map<String, Object>> history = new ArrayList<>();
 
         for (Task task : tasks) {
             if (task.getTaskExecutions() != null) {
-                history.addAll(task.getTaskExecutions());
+                for (TaskExecution execution : task.getTaskExecutions()) {
+                    Map<String, Object> taskData = new HashMap<>();
+                    taskData.put("id", task.getId());
+                    taskData.put("name", task.getName()); // ✅ Include task name
+                    taskData.put("startTime", execution.getStartTime());
+                    taskData.put("endTime", execution.getEndTime());
+                    taskData.put("output", execution.getOutput());
+                    history.add(taskData);
+                }
             }
         }
 
         if (history.isEmpty()) {
-            return ResponseEntity.noContent().build(); // 204 No Content if no history exists
+            return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(history); // Return list of executed task histories
+        return ResponseEntity.ok(history);
     }
+
 
     // ✅ Function to validate unsafe commands
     private boolean isUnsafeCommand(String command) {
