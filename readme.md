@@ -14,9 +14,7 @@
    - [5. Install & Setup Postman](#5-install--setup-postman)
    - [6. Run the Spring Boot Application](#6-run-the-spring-boot-application)
 4. [API Endpoints & Postman Testing](#api-endpoints--postman-testing)
-5. [Screenshots](#screenshots)
-6. [Common Issues & Debugging](#common-issues--debugging)
-7. [Final Notes](#final-notes)
+5. [Final Notes](#conclusion--next-steps)
 
 ---
 
@@ -366,7 +364,7 @@ These tests confirm that the system effectively prevents unsafe command executio
 
 ---
 
-**Conclusion & Next Steps:**
+## **Conclusion & Next Steps:**
 
 This submission successfully completes Task 1 of the assignment, implementing a RESTful API for managing tasks using Spring Boot and MongoDB. The development process covered everything from setting up the backend to testing API endpoints using Postman.
 
